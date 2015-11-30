@@ -10,7 +10,7 @@ using FS.Configs;
 using FS.Extends;
 using FS.Utils.Common;
 
-namespace FS.Utils.Component
+namespace FS.Utils.HttpModule
 {
     /// <summary>
     ///     重写模块的抽像基类

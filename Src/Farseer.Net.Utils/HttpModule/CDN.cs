@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.SessionState;
 using FS.Utils.Common;
 
-namespace FS.Utils.Component
+namespace FS.Utils.HttpModule
 {
     /// <summary>
     ///     重写模块的抽像基类

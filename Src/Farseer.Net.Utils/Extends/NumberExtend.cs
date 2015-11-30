@@ -16,7 +16,7 @@ namespace FS.Extends
         {
             var str = String.Empty;
             if (isHaveTag) { str = "￥"; }
-            return str + number.ToString(String.Format("n{0}", len));
+            return str + number.ToString($"n{len}");
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace FS.Extends
         {
             var str = String.Empty;
             if (isHaveTag) { str = "￥"; }
-            return str + number.ToString(String.Format("n{0}", len));
+            return str + number.ToString($"n{len}");
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace FS.Extends
         {
             var str = String.Empty;
             if (isHaveTag) { str = "￥"; }
-            return str + number.ToString(String.Format("n{0}", len));
+            return str + number.ToString($"n{len}");
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace FS.Extends
         {
             var str = String.Empty;
             if (isHaveTag) { str = "￥"; }
-            return str + number.ToString(String.Format("n{0}", len));
+            return str + number.ToString($"n{len}");
         }
 
         /// <summary>
@@ -88,9 +88,9 @@ namespace FS.Extends
         /// <returns></returns>
         public static string FormatBytesStr(int bytes)
         {
-            if (bytes > 1073741824) { return ((double) (bytes/1073741824)).ToString("0") + "G"; }
-            if (bytes > 1048576) { return ((double) (bytes/1048576)).ToString("0") + "M"; }
-            if (bytes > 1024) { return ((double) (bytes/1024)).ToString("0") + "K"; }
+            if (bytes > 1073741824) { return ((double)(bytes / 1073741824)).ToString("0") + "G"; }
+            if (bytes > 1048576) { return ((double)(bytes / 1048576)).ToString("0") + "M"; }
+            if (bytes > 1024) { return ((double)(bytes / 1024)).ToString("0") + "K"; }
             return bytes.ToString() + "Bytes";
         }
 
@@ -113,5 +113,32 @@ namespace FS.Extends
         {
             return (obj == null || obj.ToString().IsNullOrEmpty()) ? obj.ToString() : newString;
         }
+
+        /// <summary>
+        /// 根据给定的范围，超出则返回notRangeVal
+        /// </summary>
+        /// <param name="t">要判断的值</param>
+        /// <param name="min">范围值</param>
+        /// <param name="max">范围值</param>
+        /// <param name="notRangeVal">超出则返回notRangeVal</param>
+        public static int Range(this int t, int min, int max, int notRangeVal) => Range(t, min, max, notRangeVal, t);
+        /// <summary>
+        /// 根据给定的范围，超出则返回notRangeVal
+        /// </summary>
+        /// <param name="t">要判断的值</param>
+        /// <param name="min">范围值</param>
+        /// <param name="max">范围值</param>
+        /// <param name="notRangeVal">超出则返回notRangeVal</param>
+        public static int Range(this int? t, int min, int max, int notRangeVal) => Range(t.GetValueOrDefault(), min, max, notRangeVal, t.GetValueOrDefault());
+
+        /// <summary>
+        /// 根据给定的范围，超出则返回notRangeVal,则否返回inRangeVal
+        /// </summary>
+        /// <param name="t">要判断的值</param>
+        /// <param name="min">范围值</param>
+        /// <param name="max">范围值</param>
+        /// <param name="notRangeVal">超出则返回notRangeVal</param>
+        /// <param name="inRangeVal">没有超出则返回inRangeVal</param>
+        public static int Range(this int t, int min, int max, int notRangeVal, int inRangeVal) => t >= min && t <= max ? inRangeVal : notRangeVal;
     }
 }

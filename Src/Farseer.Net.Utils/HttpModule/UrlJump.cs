@@ -4,13 +4,11 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.SessionState;
-using System.Web.UI;
-using System.Web.UI.Adapters;
 using FS.Configs;
 using FS.Extends;
 using FS.Utils.Common;
 
-namespace FS.Utils.Component
+namespace FS.Utils.HttpModule
 {
     /// <summary>
     ///     跳转模块的抽像基类

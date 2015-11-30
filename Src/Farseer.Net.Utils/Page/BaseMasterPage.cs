@@ -48,7 +48,7 @@ namespace FS.Utils.Page
         {
             WebTitle = WebGeneralConfigs.ConfigEntity.WebTitle;
             JavaScript = new JavaScript(Page);
-            LhgDialog = new LhgDialog(Page);
+            LhgDialog = new LhgDialog();
         }
 
         #region Request

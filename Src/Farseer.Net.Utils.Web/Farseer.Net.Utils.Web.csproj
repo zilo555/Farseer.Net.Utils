@@ -25,7 +25,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;IsWeb</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -59,10 +59,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -157,12 +153,6 @@
     <Compile Include="..\Farseer.Net.Utils\Component\Assembly.cs">
       <Link>Component\Assembly.cs</Link>
     </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\CDN.cs">
-      <Link>Component\CDN.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\Check.cs">
-      <Link>Component\Check.cs</Link>
-    </Compile>
     <Compile Include="..\Farseer.Net.Utils\Component\Encrypt.cs">
       <Link>Component\Encrypt.cs</Link>
     </Compile>
@@ -206,12 +196,6 @@
     <Compile Include="..\Farseer.Net.Utils\Component\TimingTasks.cs">
       <Link>Component\TimingTasks.cs</Link>
     </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\UrlJump.cs">
-      <Link>Component\UrlJump.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\UrlRewriter.cs">
-      <Link>Component\UrlRewriter.cs</Link>
-    </Compile>
     <Compile Include="..\Farseer.Net.Utils\Component\VeriCode.cs">
       <Link>Component\VeriCode.cs</Link>
     </Compile>
@@ -220,6 +204,9 @@
     </Compile>
     <Compile Include="..\Farseer.Net.Utils\Configs\WebGeneralConfigs.cs">
       <Link>Configs\WebGeneralConfigs.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Configs\WebIPSecurityConfigs.cs">
+      <Link>Configs\WebIPSecurityConfigs.cs</Link>
     </Compile>
     <Compile Include="..\Farseer.Net.Utils\Configs\WebSystemConfigs.cs">
       <Link>Configs\WebSystemConfigs.cs</Link>
@@ -295,6 +282,18 @@
     </Compile>
     <Compile Include="..\Farseer.Net.Utils\Extends\TypeExtend.cs">
       <Link>Extends\TypeExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\CDN.cs">
+      <Link>HttpModule\CDN.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\IPSecurity.cs">
+      <Link>HttpModule\IPSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\UrlJump.cs">
+      <Link>HttpModule\UrlJump.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\UrlRewriter.cs">
+      <Link>HttpModule\UrlRewriter.cs</Link>
     </Compile>
     <Compile Include="..\Farseer.Net.Utils\Page\BaseControls.cs">
       <Link>Page\BaseControls.cs</Link>

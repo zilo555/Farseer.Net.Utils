@@ -104,14 +104,13 @@ namespace FS.Utils.Component
         /// <param name="second">指定时间</param>
         /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
-        public static Timer Timing(Action<object> callback, int day, int hour, int minute, int second, int millisecond)
+        public static Timer Timing(Action<object> callback, int day, int hour, int minute, int second)
         {
             var period = 1;
             if (day > 0) { period = 1000*60*60*24; }
             if (hour > -1) { period = 1000*60*60; }
             if (minute > -1) { period = 1000*60; }
             if (second > -1) { period = 1000; }
-            if (millisecond > -1) { period = 1; }
 
             var timer = new Timer(o =>
             {
@@ -120,7 +119,6 @@ namespace FS.Utils.Component
                 if (hour > -1 && dt.Hour != hour) { return; }
                 if (minute > -1 && dt.Minute != minute) { return; }
                 if (second > -1 && dt.Second != second) { return; }
-                if (millisecond > -1 && dt.Millisecond != millisecond) { return; }
 
                 callback(o);
             }, null, 0, period);
@@ -137,13 +135,12 @@ namespace FS.Utils.Component
         /// <param name="second">指定时间</param>
         /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
-        public static Timer Timing(Action<object> callback, DayOfWeek week, int hour, int minute, int second, int millisecond)
+        public static Timer Timing(Action<object> callback, DayOfWeek week, int hour, int minute, int second)
         {
             var period = 1000*60*60*24;
             if (hour > -1) { period = 1000*60*60; }
             if (minute > -1) { period = 1000*60; }
             if (second > -1) { period = 1000; }
-            if (millisecond > -1) { period = 1; }
 
             var timer = new Timer(o =>
             {
@@ -152,7 +149,6 @@ namespace FS.Utils.Component
                 if (hour > -1 && dt.Hour != hour) { return; }
                 if (minute > -1 && dt.Minute != minute) { return; }
                 if (second > -1 && dt.Second != second) { return; }
-                if (millisecond > -1 && dt.Millisecond != millisecond) { return; }
 
                 callback(o);
             }, null, 0, period);
@@ -164,22 +160,12 @@ namespace FS.Utils.Component
         /// <summary>
         ///     定时执行
         /// </summary>
-        /// <param name="millisecond">指定时间</param>
-        /// <param name="callback">执行的方法</param>
-        public static Timer Timing(Action<object> callback, int millisecond)
-        {
-            return Timing(callback, -1, -1, -1, -1, millisecond);
-        }
-
-        /// <summary>
-        ///     定时执行
-        /// </summary>
         /// <param name="second">指定时间</param>
         /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
-        public static Timer Timing(Action<object> callback, int second, int millisecond)
+        public static Timer Timing(Action<object> callback, int second)
         {
-            return Timing(callback, -1, -1, -1, second, millisecond);
+            return Timing(callback, -1, -1, -1, second);
         }
 
         /// <summary>
@@ -189,9 +175,9 @@ namespace FS.Utils.Component
         /// <param name="second">指定时间</param>
         /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
-        public static Timer Timing(Action<object> callback, int minute, int second, int millisecond)
+        public static Timer Timing(Action<object> callback, int minute, int second)
         {
-            return Timing(callback, -1, -1, minute, second, millisecond);
+            return Timing(callback, -1, -1, minute, second);
         }
 
         /// <summary>
@@ -202,9 +188,9 @@ namespace FS.Utils.Component
         /// <param name="second">指定时间</param>
         /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
-        public static Timer Timing(Action<object> callback, int hour, int minute, int second, int millisecond)
+        public static Timer Timing(Action<object> callback, int hour, int minute, int second)
         {
-            return Timing(callback, -1, hour, minute, second, millisecond);
+            return Timing(callback, -1, hour, minute, second);
         }
     }
 

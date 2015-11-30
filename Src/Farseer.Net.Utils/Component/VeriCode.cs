@@ -277,19 +277,19 @@ namespace FS.Utils.Component
                 case 0:
                     {
                         result = op1 + op2;
-                        expression = string.Format("{0} + {1} = ?", op1, op2);
+                        expression = $"{op1} + {op2} = ?";
                         break;
                     }
                 case 1:
                     {
                         result = op2 - op1;
-                        expression = string.Format("{0} + ? = {1}", op1, op2);
+                        expression = $"{op1} + ? = {op2}";
                         break;
                     }
                 case 2:
                     {
                         result = op2 - op1;
-                        expression = string.Format("? + {0} = {1}", op1, op2);
+                        expression = $"? + {op1} = {op2}";
                         break;
                     }
             }
@@ -307,13 +307,13 @@ namespace FS.Utils.Component
         /// <param name="imgHeiht">图片高度</param>
         /// <param name="stainLenght">噪音点长度</param>
         /// <param name="codeLenght">随机码长度</param>
-        public static void Alphabet(HttpContext context, string sessionKey, int codeLenght = 4, int fontSize = 12, int imgWidth = 60, int imgHeiht = 20, int stainLenght = 30)
+        public static void Alphabet(HttpContext context, string sessionKey, int codeLenght = 4, int fontSize = 14, int imgWidth = 50, int imgHeiht = 25, int stainLenght = 30)
         {
             var code = string.Empty;
             
             while (string.IsNullOrWhiteSpace(code) || code.Length != codeLenght)
             {
-                code = Guid.NewGuid().ToString().Substring(0, codeLenght);
+                code = Guid.NewGuid().ToString().Replace("-","").Substring(0, codeLenght);
             }
 
             Cookies.Set(sessionKey, code);

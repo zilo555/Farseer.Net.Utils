@@ -25,7 +25,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;IsForm</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -100,9 +100,6 @@
     </Compile>
     <Compile Include="..\Farseer.Net.Utils\Component\Assembly.cs">
       <Link>Component\Assembly.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\Check.cs">
-      <Link>Component\Check.cs</Link>
     </Compile>
     <Compile Include="..\Farseer.Net.Utils\Component\Encrypt.cs">
       <Link>Component\Encrypt.cs</Link>

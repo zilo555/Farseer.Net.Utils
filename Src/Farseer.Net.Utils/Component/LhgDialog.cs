@@ -6,7 +6,6 @@ namespace FS.Utils.Component
     /// </summary>
     public class LhgDialog
     {
-        private readonly System.Web.UI.Page page;
         /// <summary>
         /// 对话框脚本
         /// </summary>
@@ -15,11 +14,9 @@ namespace FS.Utils.Component
         /// <summary>
         /// Page值
         /// </summary>
-        /// <param name="page"></param>
         /// <param name="scriptPre"></param>
-        public LhgDialog(System.Web.UI.Page page, string scriptPre = "frameElement.api.opener.$$")
+        public LhgDialog(string scriptPre = "frameElement.api.opener.$$")
         {
-            this.page = page;
             DialogScript = scriptPre;
         }
 
@@ -28,13 +25,13 @@ namespace FS.Utils.Component
         /// </summary>
         /// <param name="message">提示内容</param>
         /// <param name="gotoUrl">跳转页面URL</param>
-        public void Alert(string message, string gotoUrl = "")
+        public string Alert(string message, string gotoUrl = "")
         {
             if (!string.IsNullOrWhiteSpace(gotoUrl))
             {
                 gotoUrl = "location.href='" + gotoUrl + "'";
             }
-            AlertFunc(message, gotoUrl);
+            return AlertFunc(message, gotoUrl);
         }
 
         /// <summary>
@@ -42,10 +39,9 @@ namespace FS.Utils.Component
         /// </summary>
         /// <param name="message">提示内容</param>
         /// <param name="func">确定后，执行的脚本</param>
-        public void AlertFunc(string message, string func = "")
+        public string AlertFunc(string message, string func = "")
         {
-            var script = DialogScript + ".dialog.alert('" + message + "',function(){ " + func + "; }).zindex().lock();";
-            page.Page.ClientScript.RegisterStartupScript(page.GetType(), "System.AlertFunc", script, true);
+            return DialogScript + ".dialog.alert('" + message + "',function(){ " + func + "; }).zindex().lock();";
         }
 
         /// <summary>
@@ -53,13 +49,13 @@ namespace FS.Utils.Component
         /// </summary>
         /// <param name="message">提示内容</param>
         /// <param name="gotoUrl">跳转地址</param>
-        public void Tip(string message, string gotoUrl = "")
+        public string Tip(string message, string gotoUrl = "")
         {
             if (!string.IsNullOrWhiteSpace(gotoUrl))
             {
                 gotoUrl = "location.href='" + gotoUrl + "'";
             }
-            Tip(message, gotoUrl, 2);
+            return Tip(message, gotoUrl, 2);
         }
 
         /// <summary>
@@ -68,10 +64,9 @@ namespace FS.Utils.Component
         /// <param name="timeout">自动关闭时间</param>
         /// <param name="func">确定后，执行的脚本</param>
         /// <param name="message">提示内容</param>
-        public void Tip(string message, string func, int timeout = 2)
+        public string Tip(string message, string func, int timeout)
         {
-            var script = DialogScript + ".dialog.tips('" + message + "', " + (timeout > 0 ? timeout : 3600) + ", 'tips.gif' ,function(){ " + func + "; }).zindex().lock();";
-            page.ClientScript.RegisterStartupScript(page.GetType(), "System.TipFunc", script, true);
+            return DialogScript + ".dialog.tips('" + message + "', " + (timeout > 0 ? timeout : 3600) + ", 'tips.gif' ,function(){ " + func + "; }).zindex().lock();";
         }
 
         /// <summary>
@@ -80,10 +75,9 @@ namespace FS.Utils.Component
         /// <param name="timeout">自动关闭时间</param>
         /// <param name="func">确定后，执行的脚本</param>
         /// <param name="message">提示内容</param>
-        public void TipSuccess(string message = "保存成功！", string func = "frameElement.api.close();", int timeout = 1)
+        public string TipSuccess(string message = "保存成功！", string func = "frameElement.api.close();", int timeout = 1)
         {
-            var script = DialogScript + ".dialog.tips('" + message + "', " + (timeout > 0 ? timeout : 3600) + ", 'succ.png' ,function(){ " + func + "; }).zindex().lock();";
-            page.ClientScript.RegisterStartupScript(page.GetType(), "System.TipFunc", script, true);
+            return DialogScript + ".dialog.tips('" + message + "', " + (timeout > 0 ? timeout : 3600) + ", 'succ.png' ,function(){ " + func + "; }).zindex().lock();";
         }
 
         /// <summary>
@@ -92,10 +86,9 @@ namespace FS.Utils.Component
         /// <param name="timeout">自动关闭时间</param>
         /// <param name="func">确定后，执行的脚本</param>
         /// <param name="message">提示内容</param>
-        public void TipError(string message = "数据不存在！", string func = "frameElement.api.close();", int timeout = 2)
+        public string TipError(string message = "数据不存在！", string func = "frameElement.api.close();", int timeout = 2)
         {
-            var script = DialogScript + ".dialog.tips('" + message + "', " + (timeout > 0 ? timeout : 3600) + ", 'fail.png' ,function(){ " + func + "; }).zindex().lock();";
-            page.ClientScript.RegisterStartupScript(page.GetType(), "System.TipFunc", script, true);
+            return DialogScript + ".dialog.tips('" + message + "', " + (timeout > 0 ? timeout : 3600) + ", 'fail.png' ,function(){ " + func + "; }).zindex().lock();";
         }
     }
 }

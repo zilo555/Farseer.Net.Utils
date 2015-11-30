@@ -11,7 +11,6 @@ using System.Web;
 using FS.Cache;
 using FS.Configs;
 using FS.Extends;
-using FS.Utils.Common;
 using FS.Utils.Component;
 
 namespace FS.Utils.Common
@@ -200,7 +199,7 @@ namespace FS.Utils.Common
         {
             if (HttpContext.Current == null) { return string.Empty; }
             var request = HttpContext.Current.Request;
-            return !request.Url.IsDefaultPort ? string.Format("{0}:{1}", request.Url.Host, request.Url.Port.ToString()) : request.Url.Host;
+            return !request.Url.IsDefaultPort ? $"{request.Url.Host}:{request.Url.Port.ToString()}" : request.Url.Host;
         }
 
         /// <summary>
