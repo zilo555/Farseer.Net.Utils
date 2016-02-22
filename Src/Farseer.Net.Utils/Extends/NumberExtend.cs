@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 // ReSharper disable once CheckNamespace
 
@@ -140,5 +141,22 @@ namespace FS.Extends
         /// <param name="notRangeVal">超出则返回notRangeVal</param>
         /// <param name="inRangeVal">没有超出则返回inRangeVal</param>
         public static int Range(this int t, int min, int max, int notRangeVal, int inRangeVal) => t >= min && t <= max ? inRangeVal : notRangeVal;
+
+        /// <summary>
+        /// 迭代指定次数标签
+        /// </summary>
+        public static string ForEach(this int t, string tag)
+        {
+            var str = new StringBuilder();
+            for (var i = 0; i < t; i++) { str.Append(tag); }
+            return str.ToString();
+        }
+        /// <summary>
+        /// 迭代指定次数标签
+        /// </summary>
+        public static void ForEach(this int t, Action<int> act)
+        {
+            for (var i = 0; i < t; i++) { act(i); }
+        }
     }
 }

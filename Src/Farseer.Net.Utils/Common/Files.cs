@@ -202,19 +202,9 @@ namespace FS.Utils.Common
         ///     获取App_Data路径
         /// </summary>
         /// <returns></returns>
-        public static string GetAppDataPath()
-        {
-            return GetRootPath() + "App_Data/";
-        }
-
-        /// <summary>
-        ///     获取App_Data路径
-        /// </summary>
-        /// <returns></returns>
         public static void CreateAppData()
         {
-            var path = GetAppDataPath();
-            if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
+            if (!Directory.Exists(SysMapPath.AppData)) { Directory.CreateDirectory(SysMapPath.AppData); }
         }
 
         /// <summary>

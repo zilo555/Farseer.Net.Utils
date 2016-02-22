@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using FS.Extends;
 
 namespace FS.Utils.Common
@@ -28,7 +29,7 @@ namespace FS.Utils.Common
             var isNew = wc == null;
             if (wc == null)
             {
-                wc = new WebClient {Proxy = null};
+                wc = new WebClient { Proxy = null };
                 wc.Headers.Add("Accept", "*/*");
                 wc.Headers.Add("Referer", url);
                 wc.Headers.Add("Cookie", "bid=\"YObnALe98pw\";");
@@ -39,7 +40,7 @@ namespace FS.Utils.Common
             {
                 wc.DownloadFile(url, savePath);
                 var f = new FileInfo(savePath);
-                fileSize = (int) f.Length;
+                fileSize = (int)f.Length;
             }
             finally
             {
@@ -77,7 +78,8 @@ namespace FS.Utils.Common
                 var data = wc.DownloadData(url);
                 strResult = encoding.GetString(data);
             }
-            catch {
+            catch
+            {
                 return string.Empty;
             }
             finally
@@ -89,10 +91,21 @@ namespace FS.Utils.Common
         }
 
         /// <summary>
+        ///     获取远程信息(异步)
+        /// </summary>
+        /// <param name="url">请求地址</param>
+        /// <param name="encoding">请求编码</param>
+        /// <param name="wc">客户端</param>
+        public static Task<string> GetSync(string url, Encoding encoding = null, WebClient wc = null)
+        {
+            return Task.Factory.StartNew(() => Get(url, encoding, wc));
+        }
+
+        /// <summary>
         ///     传入URL返回网页的html代码
         /// </summary>
         /// <param name="url">要读取的网页URL</param>
-        /// <param name="readCode">读取源文件所使用的编码</param>
+        /// <param name="encoding">读取源文件所使用的编码</param>
         /// <param name="cookie">传过去的cookie</param>
         public static string Get(string url, Encoding encoding, ref CookieContainer cookie)
         {
@@ -104,7 +117,7 @@ namespace FS.Utils.Common
             var content = string.Empty;
             try
             {
-                var request = (HttpWebRequest) WebRequest.Create(url);
+                var request = (HttpWebRequest)WebRequest.Create(url);
                 request.Proxy = null;
                 request.KeepAlive = false;
                 request.CookieContainer = cookie;
@@ -113,7 +126,7 @@ namespace FS.Utils.Common
                 request.Headers.Add("Cookie", "bid=\"YObnALe98pw\"");
                 //request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.5 Safari/537.31");
 
-                var response = (HttpWebResponse) request.GetResponse();
+                var response = (HttpWebResponse)request.GetResponse();
                 response.Cookies = cookie.GetCookies(request.RequestUri);
 
                 var respStream = response.GetResponseStream();
@@ -124,7 +137,8 @@ namespace FS.Utils.Common
                     reader.Close();
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 content = "error:" + ex.Message;
             }
             return content;
@@ -143,8 +157,7 @@ namespace FS.Utils.Common
             var isNew = false;
             if (wc == null)
             {
-                wc = new WebClient();
-                wc.Proxy = null;
+                wc = new WebClient { Proxy = null };
                 isNew = true;
             }
             string strResult = null;
@@ -160,7 +173,7 @@ namespace FS.Utils.Common
                 if (ex.Response != null)
                 {
                     var reader = new StreamReader(ex.Response.GetResponseStream(), encoding);
-                    strResult = string.Format("Error:{0}\n<hr />\n{1}", ex.Message, reader.ReadToEnd());
+                    strResult = $"Error:{ex.Message}\n<hr />\n{reader.ReadToEnd()}";
                 }
             }
             finally
@@ -196,7 +209,8 @@ namespace FS.Utils.Common
                     isHaving = web.DownloadData(url).Length > 0;
                 }
             }
-            catch {
+            catch
+            {
                 isHaving = false;
             }
             return isHaving;
@@ -207,7 +221,7 @@ namespace FS.Utils.Common
             var encoding = new ASCIIEncoding();
             var data = encoding.GetBytes(postData);
 
-            var myRequest = (HttpWebRequest) WebRequest.Create(url);
+            var myRequest = (HttpWebRequest)WebRequest.Create(url);
 
             myRequest.Method = "POST";
             myRequest.ContentType = "application/x-www-form-urlencoded";
@@ -218,7 +232,7 @@ namespace FS.Utils.Common
                 newStream.Close();
             }
 
-            using (var myResponse = (HttpWebResponse) myRequest.GetResponse())
+            using (var myResponse = (HttpWebResponse)myRequest.GetResponse())
             {
                 var reader = new StreamReader(myResponse.GetResponseStream(), Encoding.Default);
                 return reader.ReadToEnd();
@@ -261,7 +275,7 @@ namespace FS.Utils.Common
             var index = 0;
             foreach (var pair in cookieList)
             {
-                list[index] = String.Format("{0}={1}", pair.Key, pair.Value);
+                list[index] = $"{pair.Key}={pair.Value}";
                 index++;
             }
 

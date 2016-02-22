@@ -1,7 +1,10 @@
 ﻿#if IsWeb
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
+using FS.Extends;
 
 namespace FS.Utils.Common
 {
@@ -10,11 +13,6 @@ namespace FS.Utils.Common
     /// </summary>
     public abstract class Htmls
     {
-        /// <summary>
-        ///     正则
-        /// </summary>
-        public static Regex RegexFont = new Regex(@"<font color=" + "\".*?\"" + @">([\s\S]+?)</font>", RegexOptions.None);
-
         /// <summary>
         ///     返回 HTML 字符串的编码结果
         /// </summary>
@@ -57,8 +55,7 @@ namespace FS.Utils.Common
         {
             if (string.IsNullOrWhiteSpace(content)) { return string.Empty; }
             content = Regex.Replace(content, @"(\<|\s+)o([a-z]+\s?=)", "$1$2", RegexOptions.IgnoreCase);
-            content = Regex.Replace(content, @"(script|frame|form|meta|behavior|style)([\s|:|>])+", "$1.$2",
-                                    RegexOptions.IgnoreCase);
+            content = Regex.Replace(content, @"(script|frame|form|meta|behavior|style)([\s|:|>])+", "$1.$2", RegexOptions.IgnoreCase);
             return content;
         }
 
@@ -177,11 +174,72 @@ namespace FS.Utils.Common
         /// <param name="html"></param>
         public static string Compression(string html)
         {
-            
+
             html = Regex.Replace(html, Regex.Escape("\r\n"), "", RegexOptions.None);
             html = Regex.Replace(html, Regex.Escape("\r"), "", RegexOptions.None);
             html = Regex.Replace(html, ">[\\s\\r\\n]*<", "><");
             return Regex.Replace(html, "\\s+", " ");
+        }
+
+        /// <summary>
+        /// 移除所有html中的属性
+        /// </summary>
+        /// <param name="html"></param>
+        public static string RemoveAtt(string html)
+        {
+            html = Regex.Replace(html, " ([a-z]+)=\"[^\"]*\"", "", RegexOptions.None);
+            html = RemoveTag(html, "font");
+            html = RemoveTag(html, "span");
+            return html;
+        }
+
+        /// <summary>
+        /// 移除空标签
+        /// </summary>
+        /// <param name="html"></param>
+        /// <param name="tagName">标签名称</param>
+        public static string RemoveTag(string html, string tagName)
+        {
+            var partten = $"<{tagName}[^>]*>([\\s\\S]*?)</{tagName}>";
+            while (Regex.IsMatch(html, partten, RegexOptions.None)) { html = Regex.Replace(html, partten, "$1", RegexOptions.None); }
+            return html;
+        }
+
+        /// <summary>
+        /// 通过规则获取目标数据
+        /// </summary>
+        /// <param name="html">源html</param>
+        /// <param name="rule">规则</param>
+        public static string GetString(string html, string rule)
+        {
+            return new Regex(rule, RegexOptions.IgnoreCase).Match(html).Value.Trim();
+        }
+
+        /// <summary>
+        /// 通过规则获取目标数据
+        /// </summary>
+        /// <param name="html">源html</param>
+        /// <param name="rule">规则</param>
+        public static List<string> GetList(string html, string rule)
+        {
+            return GetList<string>(html, rule);
+        }
+
+        /// <summary>
+        /// 通过规则获取目标数据
+        /// </summary>
+        /// <param name="html">源html</param>
+        /// <param name="rule">规则</param>
+        public static List<T> GetList<T>(string html, string rule)
+        {
+            var lst = new List<T>();
+            try
+            {
+                var matchs = new Regex(rule, RegexOptions.IgnoreCase).Matches(html);
+                lst.AddRange(from Match item in matchs select item.Value.Trim().ConvertType<T>());
+            }
+            finally { }
+            return lst;
         }
     }
 }
