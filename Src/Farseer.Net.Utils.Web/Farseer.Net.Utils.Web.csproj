@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05F95F2C-15A2-49AA-ACF4-0357B582BBB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FS</RootNamespace>
+    <AssemblyName>Farseer.Net.Utils.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;IsWeb</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;IsWeb</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Farseer.Net, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Farseer.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Farseer.Net.Utils\Common\Chinese.cs">
+      <Link>Common\Chinese.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Cookies.cs">
+      <Link>Common\Cookies.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\DynamicOperate.cs">
+      <Link>Common\DynamicOperate.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Excel.cs">
+      <Link>Common\Excel.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Files.cs">
+      <Link>Common\Files.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Htmls.cs">
+      <Link>Common\Htmls.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Images.cs">
+      <Link>Common\Images.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\InfoComparer.cs">
+      <Link>Common\InfoComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\IpAdress.cs">
+      <Link>Common\IpAdress.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\IsType.cs">
+      <Link>Common\IsType.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Net.cs">
+      <Link>Common\Net.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\PageSplit.cs">
+      <Link>Common\PageSplit.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\QueueTask.cs">
+      <Link>Common\QueueTask.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Rand.cs">
+      <Link>Common\Rand.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Req.cs">
+      <Link>Common\Req.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\ResponseFile.cs">
+      <Link>Common\ResponseFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Reverser.cs">
+      <Link>Common\Reverser.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\RMB.cs">
+      <Link>Common\RMB.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Serialized.cs">
+      <Link>Common\Serialized.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Sessions.cs">
+      <Link>Common\Sessions.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Str.cs">
+      <Link>Common\Str.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\StrPlus.cs">
+      <Link>Common\StrPlus.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\UpLoadFile.cs">
+      <Link>Common\UpLoadFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Url.cs">
+      <Link>Common\Url.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\Web.cs">
+      <Link>Common\Web.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Common\WebCache.cs">
+      <Link>Common\WebCache.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\AdministrativeCode.cs">
+      <Link>Component\AdministrativeCode.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\ApplyCheck.cs">
+      <Link>Component\ApplyCheck.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Assembly.cs">
+      <Link>Component\Assembly.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Encrypt.cs">
+      <Link>Component\Encrypt.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\HttpClient.cs">
+      <Link>Component\HttpClient.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\JavaScript.cs">
+      <Link>Component\JavaScript.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\LhgDialog.cs">
+      <Link>Component\LhgDialog.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Mac.cs">
+      <Link>Component\Mac.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Open\IOpenAuth.cs">
+      <Link>Component\Open\IOpenAuth.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Open\QQWebOpen.cs">
+      <Link>Component\Open\QQWebOpen.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Open\SinaWebOpen.cs">
+      <Link>Component\Open\SinaWebOpen.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Open\WXWebOpen.cs">
+      <Link>Component\Open\WXWebOpen.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Pro.cs">
+      <Link>Component\Pro.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\SpeedTest.cs">
+      <Link>Component\SpeedTest.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Terminator.cs">
+      <Link>Component\Terminator.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\Thumbnail.cs">
+      <Link>Component\Thumbnail.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\TimingTasks.cs">
+      <Link>Component\TimingTasks.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\VeriCode.cs">
+      <Link>Component\VeriCode.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Component\WinRAR.cs">
+      <Link>Component\WinRAR.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Configs\WebGeneralConfigs.cs">
+      <Link>Configs\WebGeneralConfigs.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Configs\WebIPSecurityConfigs.cs">
+      <Link>Configs\WebIPSecurityConfigs.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Configs\WebSystemConfigs.cs">
+      <Link>Configs\WebSystemConfigs.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Configs\WebUrlJumpConfigs.cs">
+      <Link>Configs\WebUrlJumpConfigs.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Configs\WebUrlRewriterConfigs.cs">
+      <Link>Configs\WebUrlRewriterConfigs.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\ArrayExtend.cs">
+      <Link>Extends\ArrayExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\BoolExtend.cs">
+      <Link>Extends\BoolExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\CheckBoxListExtend.cs">
+      <Link>Extends\CheckBoxListExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\DataTableExtend.cs">
+      <Link>Extends\DataTableExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\DateTimeExtend.cs">
+      <Link>Extends\DateTimeExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\DictionaryExtend.cs">
+      <Link>Extends\DictionaryExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\DropDownList.cs">
+      <Link>Extends\DropDownList.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\EntityExtend.cs">
+      <Link>Extends\EntityExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\EnumExtend.cs">
+      <Link>Extends\EnumExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\ExpressionExtend.cs">
+      <Link>Extends\ExpressionExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\FuncExtend.cs">
+      <Link>Extends\FuncExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\IEnumerableUtilsExtend.cs">
+      <Link>Extends\IEnumerableUtilsExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\IEnumeratorExtend.cs">
+      <Link>Extends\IEnumeratorExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\IListExtend.cs">
+      <Link>Extends\IListExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\IOrderedQueryableExtend.cs">
+      <Link>Extends\IOrderedQueryableExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\IQueryableExtend.cs">
+      <Link>Extends\IQueryableExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\ListExtend.cs">
+      <Link>Extends\ListExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\NumberExtend.cs">
+      <Link>Extends\NumberExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\RepeaterExtend.cs">
+      <Link>Extends\RepeaterExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\SetExtend.cs">
+      <Link>Extends\SetExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\StringExtend.cs">
+      <Link>Extends\StringExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Extends\TypeExtend.cs">
+      <Link>Extends\TypeExtend.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\CDN.cs">
+      <Link>HttpModule\CDN.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\IPSecurity.cs">
+      <Link>HttpModule\IPSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\UrlJump.cs">
+      <Link>HttpModule\UrlJump.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\HttpModule\UrlRewriter.cs">
+      <Link>HttpModule\UrlRewriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Page\BaseControls.cs">
+      <Link>Page\BaseControls.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Page\BaseHandler.cs">
+      <Link>Page\BaseHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Page\BaseMasterPage.cs">
+      <Link>Page\BaseMasterPage.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\Page\BasePage.cs">
+      <Link>Page\BasePage.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\Farseer.Net.Utils\UI\WebControls\Repeater.cs">
+      <Link>UI\WebControls\Repeater.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
