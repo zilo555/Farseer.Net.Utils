@@ -1,11 +1,10 @@
-﻿#if IsForm
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace FS.Utils.Form.Component.WinSocket
+namespace FS.Utils.Component.WinSocket
 {
     /// <summary>
     ///     服务端（监听）Socker
@@ -228,5 +227,3 @@ namespace FS.Utils.Form.Component.WinSocket
         }
     }
 }
-
-#endif

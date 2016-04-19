@@ -1,11 +1,10 @@
-﻿#if IsForm
-using System;
+﻿using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace FS.Utils.Form.Component.WinSocket
+namespace FS.Utils.Component.WinSocket
 {
     public class ClientSocket : IDisposable
     {
@@ -223,5 +222,3 @@ namespace FS.Utils.Form.Component.WinSocket
         #endregion
     }
 }
-
-#endif

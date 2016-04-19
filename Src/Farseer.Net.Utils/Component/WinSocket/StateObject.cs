@@ -1,9 +1,8 @@
-﻿#if IsForm
-using System;
+﻿using System;
 using System.Net.Sockets;
 using System.Text;
 
-namespace FS.Utils.Form.Component.WinSocket
+namespace FS.Utils.Component.WinSocket
 {
     public class StateObject
     {
@@ -69,5 +68,3 @@ namespace FS.Utils.Form.Component.WinSocket
         }
     }
 }
-
-#endif

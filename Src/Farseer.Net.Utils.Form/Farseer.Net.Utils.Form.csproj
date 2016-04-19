@@ -7,7 +7,7 @@
     <ProjectGuid>{E6AD8305-13AD-4FA6-B9C7-7F183222D734}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FS</RootNamespace>
+    <RootNamespace>FS.Utils</RootNamespace>
     <AssemblyName>Farseer.Net.Utils.Form</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -34,169 +34,27 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\Farseer.Net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Farseer.Net.Utils\Common\Chinese.cs">
-      <Link>Common\Chinese.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\DataGridViewComparer.cs">
+    <Compile Include="..\Farseer.Net.Utils\Form\Common\DataGridViewComparer.cs">
       <Link>Common\DataGridViewComparer.cs</Link>
     </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\DynamicOperate.cs">
-      <Link>Common\DynamicOperate.cs</Link>
+    <Compile Include="..\Farseer.Net.Utils\Form\_\FS.Extends\FormExtend.cs">
+      <Link>_\FS.Extends\FormExtend.cs</Link>
     </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\Files.cs">
-      <Link>Common\Files.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\InfoComparer.cs">
-      <Link>Common\InfoComparer.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\IsType.cs">
-      <Link>Common\IsType.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\Net.cs">
-      <Link>Common\Net.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\QueueTask.cs">
-      <Link>Common\QueueTask.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\Rand.cs">
-      <Link>Common\Rand.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\Reverser.cs">
-      <Link>Common\Reverser.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\RMB.cs">
-      <Link>Common\RMB.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\Serialized.cs">
-      <Link>Common\Serialized.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\Str.cs">
-      <Link>Common\Str.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\StrPlus.cs">
-      <Link>Common\StrPlus.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Common\Url.cs">
-      <Link>Common\Url.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\AdministrativeCode.cs">
-      <Link>Component\AdministrativeCode.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\ApplyCheck.cs">
-      <Link>Component\ApplyCheck.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\Assembly.cs">
-      <Link>Component\Assembly.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\Encrypt.cs">
-      <Link>Component\Encrypt.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\Mac.cs">
-      <Link>Component\Mac.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\OLog.cs">
-      <Link>Component\OLog.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\Pro.cs">
-      <Link>Component\Pro.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\SpeedTest.cs">
-      <Link>Component\SpeedTest.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\Thumbnail.cs">
-      <Link>Component\Thumbnail.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\TimingTasks.cs">
-      <Link>Component\TimingTasks.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\WinRAR.cs">
-      <Link>Component\WinRAR.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\WinSocket\ClientSocket.cs">
-      <Link>Component\WinSocket\ClientSocket.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\WinSocket\ServerSocket.cs">
-      <Link>Component\WinSocket\ServerSocket.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Component\WinSocket\StateObject.cs">
-      <Link>Component\WinSocket\StateObject.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\ArrayExtend.cs">
-      <Link>Extends\ArrayExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\BoolExtend.cs">
-      <Link>Extends\BoolExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\DataTableExtend.cs">
-      <Link>Extends\DataTableExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\DateTimeExtend.cs">
-      <Link>Extends\DateTimeExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\DictionaryExtend.cs">
-      <Link>Extends\DictionaryExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\EntityExtend.cs">
-      <Link>Extends\EntityExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\EnumExtend.cs">
-      <Link>Extends\EnumExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\ExpressionExtend.cs">
-      <Link>Extends\ExpressionExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\FormExtend.cs">
-      <Link>Extends\FormExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\FuncExtend.cs">
-      <Link>Extends\FuncExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\IEnumerableUtilsExtend.cs">
-      <Link>Extends\IEnumerableUtilsExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\IEnumeratorExtend.cs">
-      <Link>Extends\IEnumeratorExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\IListExtend.cs">
-      <Link>Extends\IListExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\IOrderedQueryableExtend.cs">
-      <Link>Extends\IOrderedQueryableExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\IQueryableExtend.cs">
-      <Link>Extends\IQueryableExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\ListExtend.cs">
-      <Link>Extends\ListExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\NumberExtend.cs">
-      <Link>Extends\NumberExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\SetExtend.cs">
-      <Link>Extends\SetExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\StringExtend.cs">
-      <Link>Extends\StringExtend.cs</Link>
-    </Compile>
-    <Compile Include="..\Farseer.Net.Utils\Extends\TextBoxExtend.cs">
-      <Link>Extends\TextBoxExtend.cs</Link>
+    <Compile Include="..\Farseer.Net.Utils\Form\_\FS.Extends\TextBoxExtend.cs">
+      <Link>_\FS.Extends\TextBoxExtend.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Farseer.Net.Utils\Farseer.Net.Utils.csproj">
+      <Project>{f82573c6-360b-4795-aeb2-c57d947857d1}</Project>
+      <Name>Farseer.Net.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

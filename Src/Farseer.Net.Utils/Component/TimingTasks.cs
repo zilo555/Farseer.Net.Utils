@@ -102,7 +102,6 @@ namespace FS.Utils.Component
         /// <param name="hour">指定时间</param>
         /// <param name="minute">指定时间</param>
         /// <param name="second">指定时间</param>
-        /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
         public static Timer Timing(Action<object> callback, int day, int hour, int minute, int second)
         {
@@ -133,7 +132,6 @@ namespace FS.Utils.Component
         /// <param name="hour">指定时间</param>
         /// <param name="minute">指定时间</param>
         /// <param name="second">指定时间</param>
-        /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
         public static Timer Timing(Action<object> callback, DayOfWeek week, int hour, int minute, int second)
         {
@@ -161,7 +159,6 @@ namespace FS.Utils.Component
         ///     定时执行
         /// </summary>
         /// <param name="second">指定时间</param>
-        /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
         public static Timer Timing(Action<object> callback, int second)
         {
@@ -173,7 +170,6 @@ namespace FS.Utils.Component
         /// </summary>
         /// <param name="minute">指定时间</param>
         /// <param name="second">指定时间</param>
-        /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
         public static Timer Timing(Action<object> callback, int minute, int second)
         {
@@ -186,7 +182,6 @@ namespace FS.Utils.Component
         /// <param name="hour">指定时间</param>
         /// <param name="minute">指定时间</param>
         /// <param name="second">指定时间</param>
-        /// <param name="millisecond">指定时间</param>
         /// <param name="callback">执行的方法</param>
         public static Timer Timing(Action<object> callback, int hour, int minute, int second)
         {

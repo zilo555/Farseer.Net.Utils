@@ -12,7 +12,7 @@ namespace FS.Utils.Common
     /// </summary>
     public static class Str
     {
-        private static Regex RegexBr = new Regex(@"(\r\n)", RegexOptions.IgnoreCase);
+        private static Regex _regexBr = new Regex(@"(\r\n)", RegexOptions.IgnoreCase);
 
         /// <summary>
         ///     返回字符串真实长度, 1个汉字长度为2

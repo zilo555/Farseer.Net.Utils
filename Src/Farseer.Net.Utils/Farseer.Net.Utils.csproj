@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F82573C6-360B-4795-AEB2-C57D947857D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FS.Utils</RootNamespace>
+    <AssemblyName>Farseer.Net.Utils</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Farseer.Net">
+      <HintPath>..\..\Lib\Farseer.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\SpeedTest.cs" />
+    <Compile Include="Common\Compress.cs" />
+    <Compile Include="Web\FS.Extends\EnumMvcExtend.cs" />
+    <Compile Include="Web\_\FS.Extends\EntityWebExtend.cs" />
+    <Compile Include="Web\_\FS.Extends\IEnumerableWebExtend.cs" />
+    <Compile Include="Component\Chinese.cs" />
+    <Compile Include="Web\Common\Cookies.cs" />
+    <Compile Include="Form\Common\DataGridViewComparer.cs" />
+    <Compile Include="Common\DynamicOperate.cs" />
+    <Compile Include="Web\Common\Excel.cs" />
+    <Compile Include="Common\Files.cs" />
+    <Compile Include="Web\Common\Htmls.cs" />
+    <Compile Include="Web\Common\Images.cs" />
+    <Compile Include="Common\InfoComparer.cs" />
+    <Compile Include="Component\IpAdress.cs" />
+    <Compile Include="Common\IsType.cs" />
+    <Compile Include="Common\Net.cs" />
+    <Compile Include="Web\Common\PageSplit.cs" />
+    <Compile Include="Component\QueueTask.cs" />
+    <Compile Include="Common\Rand.cs" />
+    <Compile Include="Web\Common\Req.cs" />
+    <Compile Include="Web\Common\ResponseFile.cs" />
+    <Compile Include="Component\Reverser.cs" />
+    <Compile Include="Component\RMB.cs" />
+    <Compile Include="Common\Serialized.cs" />
+    <Compile Include="Web\Common\Sessions.cs" />
+    <Compile Include="Common\Str.cs" />
+    <Compile Include="Component\StrPlus.cs" />
+    <Compile Include="Web\Common\UpLoadFile.cs" />
+    <Compile Include="Common\Url.cs" />
+    <Compile Include="Web\Common\Web.cs" />
+    <Compile Include="Web\Common\WebCache.cs" />
+    <Compile Include="Component\AdministrativeCode.cs" />
+    <Compile Include="Component\ApplyCheck.cs" />
+    <Compile Include="Common\Assembly.cs" />
+    <Compile Include="Common\Encrypt.cs" />
+    <Compile Include="Web\Component\HttpClient.cs" />
+    <Compile Include="Web\Component\JavaScript.cs" />
+    <Compile Include="Web\Component\LhgDialog.cs" />
+    <Compile Include="Common\Mac.cs" />
+    <Compile Include="Web\Component\Routing\DomainData.cs" />
+    <Compile Include="Web\Component\Routing\DomainRoute.cs" />
+    <Compile Include="Web\Component\Routing\LinkExtensions.cs" />
+    <Compile Include="Component\ConsoleMsg.cs" />
+    <Compile Include="Web\Component\Open\IOpenAuth.cs" />
+    <Compile Include="Web\Component\Open\QQWebOpen.cs" />
+    <Compile Include="Web\Component\Open\SinaWebOpen.cs" />
+    <Compile Include="Web\Component\Open\WXWebOpen.cs" />
+    <Compile Include="Common\Pro.cs" />
+    <Compile Include="Component\SpeedTest.cs" />
+    <Compile Include="Web\Component\Terminator.cs" />
+    <Compile Include="Common\Thumbnail.cs" />
+    <Compile Include="Component\TimingTasks.cs" />
+    <Compile Include="Web\Component\VeriCode.cs" />
+    <Compile Include="Component\WinSocket\ClientSocket.cs" />
+    <Compile Include="Component\WinSocket\ServerSocket.cs" />
+    <Compile Include="Component\WinSocket\StateObject.cs" />
+    <Compile Include="Web\_\FS.Configs\WebGeneralConfigs.cs" />
+    <Compile Include="Web\_\FS.Configs\WebIPSecurityConfigs.cs" />
+    <Compile Include="Web\_\FS.Configs\WebSystemConfigs.cs" />
+    <Compile Include="Web\_\FS.Configs\WebUrlJumpConfigs.cs" />
+    <Compile Include="Web\_\FS.Configs\WebUrlRewriterConfigs.cs" />
+    <Compile Include="_\FS.Extends\ArrayExtend.cs" />
+    <Compile Include="_\FS.Extends\BoolExtend.cs" />
+    <Compile Include="Web\_\FS.Extends\CheckBoxListExtend.cs" />
+    <Compile Include="_\FS.Extends\DataTableExtend.cs" />
+    <Compile Include="_\FS.Extends\DateTimeExtend.cs" />
+    <Compile Include="_\FS.Extends\DictionaryExtend.cs" />
+    <Compile Include="Web\_\FS.Extends\DropDownList.cs" />
+    <Compile Include="_\FS.Extends\EntityExtend.cs" />
+    <Compile Include="_\FS.Extends\EnumExtend.cs" />
+    <Compile Include="_\FS.Extends\ExpressionExtend.cs" />
+    <Compile Include="Form\_\FS.Extends\FormExtend.cs" />
+    <Compile Include="_\FS.Extends\FuncExtend.cs" />
+    <Compile Include="_\FS.Extends\IEnumerableUtilsExtend.cs" />
+    <Compile Include="_\FS.Extends\IEnumeratorExtend.cs" />
+    <Compile Include="_\FS.Extends\IListExtend.cs" />
+    <Compile Include="_\FS.Extends\IOrderedQueryableExtend.cs" />
+    <Compile Include="_\FS.Extends\IQueryableExtend.cs" />
+    <Compile Include="_\FS.Extends\ListExtend.cs" />
+    <Compile Include="_\FS.Extends\NumberExtend.cs" />
+    <Compile Include="Web\_\FS.Extends\RepeaterExtend.cs" />
+    <Compile Include="Web\_\FS.Extends\SetExtend.cs" />
+    <Compile Include="_\FS.Extends\StringExtend.cs" />
+    <Compile Include="Form\_\FS.Extends\TextBoxExtend.cs" />
+    <Compile Include="Web\_\FS.Extends\TypeExtend.cs" />
+    <Compile Include="Web\HttpModule\CDN.cs" />
+    <Compile Include="Web\HttpModule\IPSecurity.cs" />
+    <Compile Include="Web\HttpModule\UrlJump.cs" />
+    <Compile Include="Web\HttpModule\UrlRewriter.cs" />
+    <Compile Include="Web\Page\BaseController.cs" />
+    <Compile Include="Web\Page\BaseControls.cs" />
+    <Compile Include="Web\Page\BaseHandler.cs" />
+    <Compile Include="Web\Page\BaseMasterPage.cs" />
+    <Compile Include="Web\Page\BasePage.cs" />
+    <Compile Include="Web\UI\Repeater.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
