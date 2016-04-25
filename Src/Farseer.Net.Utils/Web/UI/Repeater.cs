@@ -350,9 +350,9 @@ namespace FS.Utils.UI
             }
             if (!ChangePageSize)
             {
-                HtmlSplit = Regex.Replace(HtmlSplit, string.Format("pageSize={0}&", PageSize), "", RegexOptions.None);
-                HtmlSplit = Regex.Replace(HtmlSplit, string.Format("/?pageSize={0}", PageSize), "", RegexOptions.None);
-                HtmlSplit = Regex.Replace(HtmlSplit, string.Format("pageSize={0}", PageSize), "", RegexOptions.None);
+                HtmlSplit = Regex.Replace(HtmlSplit, $"pageSize={PageSize}&", "", RegexOptions.None);
+                HtmlSplit = Regex.Replace(HtmlSplit, $"/?pageSize={PageSize}", "", RegexOptions.None);
+                HtmlSplit = Regex.Replace(HtmlSplit, $"pageSize={PageSize}", "", RegexOptions.None);
             }
 
             if (Languange == LanguageType.English)

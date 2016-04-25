@@ -4,7 +4,7 @@ namespace FS.Extends
     /// <summary>
     ///     格式化变量
     /// </summary>
-    public static class BoolExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     结果为True时，输出参数

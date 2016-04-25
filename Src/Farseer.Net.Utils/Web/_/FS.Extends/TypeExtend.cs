@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 // ReSharper disable once CheckNamespace
 namespace FS.Extends
 {
-    public static class TypeExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     枚举转ListItem

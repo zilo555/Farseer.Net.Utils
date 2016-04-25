@@ -2,7 +2,7 @@
 
 namespace FS.Extends
 {
-    public static class FormExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     检查是否存在该类型的子窗体

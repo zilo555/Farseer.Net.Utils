@@ -7,7 +7,7 @@ using FS.Infrastructure;
 
 namespace FS.Extends
 {
-    public static class WebDropDownListExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     绑定到DropDownList

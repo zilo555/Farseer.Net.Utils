@@ -8,7 +8,7 @@ namespace FS.Extends
     /// <summary>
     ///     其它扩展，夫归类的扩展
     /// </summary>
-    public static class DateTimeExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     获取短日期

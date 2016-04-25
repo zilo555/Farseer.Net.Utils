@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace FS.Extends
 {
-    public static class ArrayExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     指定清除标签的内容

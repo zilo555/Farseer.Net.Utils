@@ -7,7 +7,7 @@ using System.Text;
 
 namespace FS.Extends
 {
-    public static class DictionaryExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     扩展 Dictionary 根据Value反向查找Key的方法

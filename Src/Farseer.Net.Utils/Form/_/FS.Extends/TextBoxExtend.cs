@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace FS.Extends
 {
-    public static class TextBoxExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     清除空格

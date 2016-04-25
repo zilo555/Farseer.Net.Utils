@@ -12,7 +12,7 @@ namespace FS.Extends
     /// <summary>
     ///     String扩展工具
     /// </summary>
-    public static class StringExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     将字符串转换成List型

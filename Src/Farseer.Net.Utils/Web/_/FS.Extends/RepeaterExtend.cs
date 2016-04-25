@@ -5,7 +5,7 @@ using FS.Utils.UI;
 // ReSharper disable once CheckNamespace
 namespace FS.Extends
 {
-    public static class RepeaterExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     IEnumerable绑定到Repeater

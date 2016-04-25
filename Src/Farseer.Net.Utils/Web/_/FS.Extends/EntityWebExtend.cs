@@ -7,7 +7,7 @@ using FS.Utils.Common;
 
 namespace FS.Extends
 {
-    public static class EntityWebExtend
+    public static partial class UtilsExtend
     {
 
     /// <summary>

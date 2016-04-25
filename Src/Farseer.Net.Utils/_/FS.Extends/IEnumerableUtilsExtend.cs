@@ -5,7 +5,7 @@ using FS.Infrastructure;
 
 namespace FS.Extends
 {
-    public static class IEnumerableUtilsExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     复制一个新的List

@@ -8,7 +8,7 @@ namespace FS.Extends
     /// <summary>
     ///     格式化变量
     /// </summary>
-    public static class NumberExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     数字格式化,将转换成1000,10

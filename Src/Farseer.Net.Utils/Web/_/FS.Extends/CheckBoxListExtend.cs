@@ -10,7 +10,7 @@ using FS.Utils.Common;
 // ReSharper disable once CheckNamespace
 namespace FS.Extends
 {
-    public static class CheckBoxListExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     获取CheckBoxList中，选中后的枚举值

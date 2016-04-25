@@ -4,7 +4,7 @@
 
 namespace FS.Extends
 {
-    public static class IEnumeratorExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     判断value是否存在于列表中

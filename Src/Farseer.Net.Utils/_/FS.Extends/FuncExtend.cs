@@ -4,7 +4,7 @@
 
 namespace FS.Extends
 {
-    public static class FuncExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     Func 转换成 Predicate 对象

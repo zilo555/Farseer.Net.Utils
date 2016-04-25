@@ -7,7 +7,7 @@ using FS.Utils.UI;
 
 namespace FS.Extends
 {
-    public static class IEnumerableWebExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     对List进行分页

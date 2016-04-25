@@ -4,7 +4,7 @@
 
 namespace FS.Extends
 {
-    public static class IQueryableExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     数据分页

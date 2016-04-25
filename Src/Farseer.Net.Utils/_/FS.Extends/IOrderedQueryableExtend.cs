@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace FS.Extends
 {
-    public static class IOrderedQueryableExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     对IOrderedQueryable进行分页

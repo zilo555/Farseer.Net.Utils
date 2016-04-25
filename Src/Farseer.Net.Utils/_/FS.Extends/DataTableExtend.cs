@@ -9,7 +9,7 @@ namespace FS.Extends
     /// <summary>
     ///     格式化变量
     /// </summary>
-    public static class DataTableExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     对DataTable排序

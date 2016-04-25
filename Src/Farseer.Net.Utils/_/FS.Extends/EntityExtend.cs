@@ -6,7 +6,7 @@ using FS.Utils.Common;
 // ReSharper disable once CheckNamespace
 namespace FS.Extends
 {
-    public static class EntityExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     生成测试数据

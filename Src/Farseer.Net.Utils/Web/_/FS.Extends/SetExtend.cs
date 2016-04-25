@@ -7,7 +7,7 @@ using FS.Utils.Common;
 
 namespace FS.Extends
 {
-    public static class SetExtend
+    public static partial class UtilsExtend
     {
 
 //#if !IsMvc

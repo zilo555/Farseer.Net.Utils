@@ -11,7 +11,7 @@ namespace FS.Extends
     /// <summary>
     ///     Expression表达式树扩展
     /// </summary>
-    public static class ExpressionExtend
+    public static partial class UtilsExtend
     {
         /// <summary>
         ///     And 操作
