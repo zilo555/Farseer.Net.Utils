@@ -175,7 +175,7 @@ namespace FS.Utils.Page
                 {
                     continue;
                 }
-                parms += string.Format("{0}={1}&", kvp.Key, kvp.Value);
+                parms += $"{kvp.Key}={kvp.Value}&";
             }
             return parms.DelEndOf("&");
         }

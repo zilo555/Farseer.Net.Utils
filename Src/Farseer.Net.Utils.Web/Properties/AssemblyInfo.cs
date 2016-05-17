@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Farseer.Net.Utils.Web")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("针对Web环境提供的方法、扩展")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("http://www.fsgit.com")]
 [assembly: AssemblyProduct("Farseer.Net.Utils.Web")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
