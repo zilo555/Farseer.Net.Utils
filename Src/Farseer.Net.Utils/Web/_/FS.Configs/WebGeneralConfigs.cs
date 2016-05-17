@@ -12,9 +12,9 @@ namespace FS.Configs
     public class WebGeneral
     {
         /// <summary> 网站标题 </summary>
-        public string WebTitle = "感谢使用Farseer.Net V1.2";
+        public string WebTitle = "感谢使用Farseer.Net V1.3";
         /// <summary> 重写域名替换(多个用;分隔) </summary>
-        public string RewriterDomain = "qyn99.com;";
+        public string RewriterDomain = "fsgit.com;";
         /// <summary> Cookies域，不填，则自动当前域 </summary>
         public string CookiesDomain = "";
         /// <summary> 忽略登陆判断地址(多个用;分隔) </summary>
