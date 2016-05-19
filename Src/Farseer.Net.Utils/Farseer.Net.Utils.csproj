@@ -95,7 +95,7 @@
     <Compile Include="Web\Component\Open\SinaWebOpen.cs" />
     <Compile Include="Web\Component\Open\WXWebOpen.cs" />
     <Compile Include="Common\Pro.cs" />
-    <Compile Include="Component\SpeedTest.cs" />
+    <Compile Include="Component\SpeedTestMultiple.cs" />
     <Compile Include="Web\Component\Terminator.cs" />
     <Compile Include="Common\Thumbnail.cs" />
     <Compile Include="Component\TimingTasks.cs" />

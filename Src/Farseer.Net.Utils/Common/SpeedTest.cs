@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace FS.Utils.Common
 {
-    public class Test
+    public class SpeedTest
     {
         /// <summary>
         ///     初始化进程

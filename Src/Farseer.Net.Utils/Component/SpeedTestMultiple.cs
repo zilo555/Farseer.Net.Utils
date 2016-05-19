@@ -9,7 +9,7 @@ namespace FS.Utils.Component
     ///     测试效率的工具
     ///     用于做平均效率测试
     /// </summary>
-    public class SpeedTest : IDisposable
+    public class SpeedTestMultiple : IDisposable
     {
         /// <summary>
         ///     锁定
@@ -39,7 +39,7 @@ namespace FS.Utils.Component
         /// </summary>
         /// <param name="keyName"></param>
         /// <returns></returns>
-        public SpeedTest Begin(string keyName)
+        public SpeedTestMultiple Begin(string keyName)
         {
             if (string.IsNullOrWhiteSpace(keyName)) { throw new Exception("必须设置keyName的值！"); }
 
@@ -53,7 +53,7 @@ namespace FS.Utils.Component
         /// <summary>
         ///     开始计数
         /// </summary>
-        public SpeedTest Begin()
+        public SpeedTestMultiple Begin()
         {
             var result = new SpeedResult { Timer = new Stopwatch() };
             result.Timer.Start();
