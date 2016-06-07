@@ -216,9 +216,9 @@ namespace FS.Utils.Common
             return isHaving;
         }
 
-        public static string Post(string url, string postData)
+        public static string Post(string url, string postData, Encoding encoding = null)
         {
-            var encoding = new ASCIIEncoding();
+            if (encoding == null) { encoding = Encoding.UTF8; }
             var data = encoding.GetBytes(postData);
 
             var myRequest = (HttpWebRequest)WebRequest.Create(url);
