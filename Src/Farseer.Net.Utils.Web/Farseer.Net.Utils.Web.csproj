@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Farseer.Net">
-      <HintPath>..\..\Lib\Farseer.Net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -193,6 +190,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Farseer.Net\Src\Farseer.Net.csproj">
+      <Project>{f6345d1b-c5dc-464c-a417-c02d7cd37e52}</Project>
+      <Name>Farseer.Net</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Farseer.Net.Utils\Farseer.Net.Utils.csproj">
       <Project>{f82573c6-360b-4795-aeb2-c57d947857d1}</Project>
       <Name>Farseer.Net.Utils</Name>
