@@ -116,13 +116,31 @@ namespace FS.Extends
         }
 
         /// <summary>
+        /// 根据给定的范围，超出则返回notRangeVal,则否返回inRangeVal
+        /// </summary>
+        /// <param name="t">要判断的值</param>
+        /// <param name="min">范围值</param>
+        /// <param name="max">范围值</param>
+        /// <param name="notRangeVal">超出则返回notRangeVal</param>
+        /// <param name="inRangeVal">没有超出则返回inRangeVal</param>
+        public static int Range(this int t, int min, int max, int notRangeVal, int inRangeVal) => t >= min && t <= max ? inRangeVal : notRangeVal;
+        /// <summary>
+        /// 根据给定的范围，超出则返回notRangeVal,则否返回inRangeVal
+        /// </summary>
+        /// <param name="t">要判断的值</param>
+        /// <param name="min">范围值</param>
+        /// <param name="max">范围值</param>
+        /// <param name="notRangeVal">超出则返回notRangeVal</param>
+        /// <param name="inRangeVal">没有超出则返回inRangeVal</param>
+        public static int Range(this int? t, int min, int max, int notRangeVal, int inRangeVal) => Range(t.GetValueOrDefault(), min, max, notRangeVal, inRangeVal);
+        /// <summary>
         /// 根据给定的范围，超出则返回notRangeVal
         /// </summary>
         /// <param name="t">要判断的值</param>
         /// <param name="min">范围值</param>
         /// <param name="max">范围值</param>
         /// <param name="notRangeVal">超出则返回notRangeVal</param>
-        public static int Range(this int t, int min, int max, int notRangeVal) => Range(t, min, max, notRangeVal, t);
+        public static int Range(this int t, int min, int max, int notRangeVal) => t >= min && t <= max ? t : notRangeVal;
         /// <summary>
         /// 根据给定的范围，超出则返回notRangeVal
         /// </summary>
@@ -133,14 +151,19 @@ namespace FS.Extends
         public static int Range(this int? t, int min, int max, int notRangeVal) => Range(t.GetValueOrDefault(), min, max, notRangeVal, t.GetValueOrDefault());
 
         /// <summary>
-        /// 根据给定的范围，超出则返回notRangeVal,则否返回inRangeVal
+        /// 根据给定的范围，是否在Min和Max范围内
         /// </summary>
         /// <param name="t">要判断的值</param>
         /// <param name="min">范围值</param>
         /// <param name="max">范围值</param>
-        /// <param name="notRangeVal">超出则返回notRangeVal</param>
-        /// <param name="inRangeVal">没有超出则返回inRangeVal</param>
-        public static int Range(this int t, int min, int max, int notRangeVal, int inRangeVal) => t >= min && t <= max ? inRangeVal : notRangeVal;
+        public static bool IsRange(this int t, int min, int max) => t >= min && t <= max;
+        /// <summary>
+        /// 根据给定的范围，是否在Min和Max范围内
+        /// </summary>
+        /// <param name="t">要判断的值</param>
+        /// <param name="min">范围值</param>
+        /// <param name="max">范围值</param>
+        public static bool IsRange(this int? t, int min, int max) => IsRange(t.GetValueOrDefault(), min, max);
 
         /// <summary>
         /// 迭代指定次数标签
